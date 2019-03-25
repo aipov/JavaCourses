@@ -16,13 +16,47 @@ public class Lesson4_FlowControl {
      *
      * @return самую длинную строку из полученного массива
      */
-    public static int task1(String[] strings) {
-       return 0;
+
+    // используюя цикл for each
+    /*
+    public static String task1(String[] strings) {
+        String maxText = "";
+        for (String name : strings) {
+            if (name.length() > maxText.length()) {
+                maxText = name;
+            }
+        }
+       return maxText;
+    }
+*/
+
+    // используя цикл for
+
+    public static String task1(String[] strings) {
+        String maxText = "";
+        int i = 0;
+        for (i = 0; i < strings.length; i++) {
+            if (strings[i].length() > maxText.length()) {
+                maxText = strings[i];
+            }
+        }
+        return maxText;
     }
 
-    public  static void main(String[] names) {
-        names = new String[]{"Тихий дон", "Вишневый сад", "Война и мир", "Мертвые души"};
-    }
+    // метод main для самого длинного названия
+/*
+    public static void main(String[] names) {
+        names = new String[]{"Тихий дон", "Roman", "Мертвые души", "Война и мир", "Вишневый сад"};
+        String maxText = "";
+        int i = 0;
+        for (i = 0; i < names.length; i++) {
+            if (names[i].length() > maxText.length()) {
+                maxText = names[i];
+            }
+        } // закрывает цикл
+        System.out.println(maxText);
+    } // закрывает метод main
+*/
 
     /**
      * В рамках задания необходимо реализовать микро-калькулятор.
@@ -95,6 +129,6 @@ public class Lesson4_FlowControl {
                     result=0;
         }
         return result;*/
-    }
+        }
     }
 
